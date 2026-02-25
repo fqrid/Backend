@@ -18,7 +18,6 @@ Este proyecto implementa **seguridad a nivel de datos** usando **JWT** y referen
 ## Modelo de Datos
 
 ### Snippet
-```js
 {
   user: ObjectId (ref: "User"),
   title: String (required, min: 3),
@@ -26,6 +25,7 @@ Este proyecto implementa **seguridad a nivel de datos** usando **JWT** y referen
   code: String (required),
   tags: [String]
 }
+
 
 Cada snippet pertenece a un único usuario, identificado mediante el token JWT.
 
@@ -41,15 +41,16 @@ Autenticación
 Método	Endpoint	Descripción
 POST	/api/v1/auth/register	Registrar usuario
 POST	/api/v1/auth/login	Login y obtención de token
-🧩 Snippets (Protegidos con JWT)
+
+Snippets (Protegidos con JWT)
 Método	Endpoint	Acción
 POST	/api/v1/snippets	Crear snippet
 GET	/api/v1/snippets	Listar snippets del usuario
 PUT	/api/v1/snippets/:id	Editar snippet propio
 DELETE	/api/v1/snippets/:id	Eliminar snippet propio
-🛡️ Seguridad: Muro de Privacidad
+Seguridad: Muro de Privacidad
 
-El sistema garantiza que:
+## El sistema garantiza que:
 
 Un usuario no puede ver snippets ajenos
 
@@ -73,20 +74,20 @@ Resultado esperado: 401 Unauthorized o 404 Not Found
 
 Si el snippet no se elimina, el sistema es seguro.
 
-⚙️ Instalación y Ejecución
-1️⃣ Clonar el repositorio
+### Instalación y Ejecución
+1️. Clonar el repositorio
 git clone https://github.com/tu-usuario/devlocker.git
 cd devlocker
-2️⃣ Instalar dependencias
+2️. Instalar dependencias
 npm install
-3️⃣ Configurar variables de entorno
+3️. Configurar variables de entorno
 
 Crear archivo .env:
 
 PORT=5000
 MONGO_URI=tu_uri_de_mongodb
 JWT_SECRET=tu_secreto_jwt
-4️⃣ Ejecutar el proyecto
+4️. Ejecutar el proyecto
 npm run dev
 
 Servidor corriendo en:
