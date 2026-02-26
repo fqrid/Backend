@@ -93,11 +93,8 @@ npm run dev
 Servidor corriendo en:
 
 http://localhost:5000
-Autores
+Autor
 Farid Castellanos
-
-Proyecto académico – Trabajo en parejas
-Desarrollado para el reto DevLocker v1
 
 Estado del Proyecto
 
